@@ -1,0 +1,9 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<input type="file" class="file-input" name = "myfile" (change)="onFileSelected($event)" #fileUpload>
+<div class="file-upload">
+  {{fileName || "No file uploaded yet."}}
+  <button mat-mini-fab class="upload-btn" (click)="fileUpload.click()">
+    <mat-icon>attach_file</mat-icon>
+  </button>
+  <img [src]="path" width="{{w}}" height="{{h}}">
+</div>
